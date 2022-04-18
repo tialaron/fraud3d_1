@@ -13,7 +13,7 @@ st.title("3D отображение внутренней работы авток
 'Вашему вниманию предлагается модель распределения транзакций на нормальные (синие) и мошеннические (оранжевые).'
 'Распределение проводилось с помощью заранее обученного автокодировщика с 3 нейронами внутри скрытого среднего слоя.'
 'Именно поэтому у нас график трехмерный.Создание автокодировщика с более мощным скрытым слоем может разграничить транзакции более точно.'
-df = pd.read_csv("H:\Pythonprojects\\frauds3d\\venv\creditcard1.csv") # читаем базу
+df = pd.read_csv("creditcard2.csv") # читаем базу
 
 # Удаляем столбец со временем
 data_12 = df.drop(['Time'], axis=1)
@@ -32,7 +32,7 @@ X_frauds = frauds.drop(['Class'], axis=1)
 X_normal_arr = X_normal.values
 X_frauds_arr = X_frauds.values
 #Загружаем сеть
-model = load_model('H:\Pythonprojects\\frauds3d\\venv\\autocoder2_3d.h5')
+model = load_model('autocoder2_3d.h5')
 #Из первых обученных слоев этой сети создаем другую
 hid_rep = Sequential()
 hid_rep.add(model.layers[0])
