@@ -2,9 +2,9 @@ import streamlit as st
 import numpy as np # библиотека для работы с массивами данных
 import pandas as pd # библиотека для анализа и обработки данных
 import matplotlib.pyplot as plt # из библиотеки для визуализации данных
-import seaborn as sns
+#import seaborn as sns
 
-from mpl_toolkits.mplot3d import Axes3D
+#from mpl_toolkits.mplot3d import Axes3D
 from sklearn.model_selection import train_test_split # модуль для разбивки выборки на тренировочную/тестовую
 from sklearn.preprocessing import StandardScaler # модуль для стандартизации данных
 from tensorflow.keras.models import Sequential,load_model
